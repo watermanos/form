@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=text]{
+	width:200px;
+}
+input[type=submit]{
+	width: 100px;
+}
+</style>
+
+</head>
+<body>
+ <h2> Info about you</h2>
+	<form action="getinfo.php" method="post">
+		<label form="fname">First name</label>
+		<br>
+		<input type="text" id="fname" name="firstname">
+	<br>
+		<label form="lname">Last name</label>
+		<br>
+		<input type="text" id="lname" name="lastname">
+		<br>
+		<br>
+		<input type="radio" name="gender" value="male">Male<br>
+		<input type="radio" name="gender" value="female">Female<br>
+		<br>
+		<input type="checkbox" id="ftick" name="sport1" value="Football" onclick="foot()" checked>I like football<br>
+		<input type="checkbox" id="btick" name="sport2" value="Basket" onclick="basket()" checked>I like basketball<br>
+<br>
+
+
+		
+		<select id="fteam" name="fteam">
+			<option value="none">Football team</option>
+			<option value="asteras">Asteras</option>
+			<option value="atromitos">Atromitos</option>
+			<option value="kalonis">AEL KALONIS</option>
+			<option value="veroia">Veroia</option>
+			<option value="olympiakos">Olympiakos</option>
+			<option value="panaitolikos">Panaitolikos</option>
+			<option value="panathinaikos">Panathinaikos</option>
+			<option value="paok">PAOK</option>
+			<option value="pas">PAS Giannena</option>
+			<option value="skoda">Skoda Ksanthi</option>
+		</select>
+		<br>
+		
+		<select id="bteam" name="bteam">
+			<option value="none">Basketball team</option>
+			<option value="aek">AEK</option>
+			<option value="aris">Aris</option>
+			<option value="olympiakos">Olympiakos</option>
+			<option value="panathinaikos">Panathinaikos</option>
+			<option value="paok">PAOK</option>
+			<option value="panionios">Panionios</option>
+		</select>
+		<br>
+		<br>
+		<input type="submit" value="Submit">
+	</form> 
+<script>
+function foot(){
+		if(document.getElementById('ftick').checked != 'checked')
+			{
+			document.getElementById('fteam').style.visibility = 'hidden';
+			}
+		else{	
+			document.getElementById('fteam').style.visibility = 'visible';
+			}
+	}
+  function basket(){
+		if(document.getElementById('btick').checked != 'checked')
+			{
+			document.getElementById('bteam').style.visibility = 'hidden';
+			}
+		else{	
+			document.getElementById('bteam').style.visibility = 'visible';
+			}
+	}
+ 
+</script>
+</body>
+</html>
